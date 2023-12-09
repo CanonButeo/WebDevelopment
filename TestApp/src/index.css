@@ -1,0 +1,311 @@
+@font-face {
+	font-family:"Avenir-Book";
+	src: url("public/fonts/Avenir-Book.ttf") format("truetype")
+}
+
+@font-face {
+	font-family:"Avenir-Heavy";
+	src: url("public/fonts/Avenir-Heavy.ttf") format("truetype")
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.05em;
+	font-family: "Avenir-Heavy";
+	
+}
+
+.title, .header-icons {
+	margin: 1vw 1.3vw;
+}
+
+.bag-icon {
+	margin-left: 1.5vw;
+}
+
+.category-title {
+	font-size: 1.7em;
+	font-family: "Montserrat",sans-serif;
+	margin-bottom: 22px;
+    text-align: center;
+
+}
+.product-slider {
+	position: relative;
+	max-width: 570px;
+	width: 88vw;
+	height: 60vw;
+	display: flex;
+	flex-direction: row;
+	margin: auto;;
+	justify-content: center;
+}
+
+.slide {
+   background-color: white;	
+   position: absolute;
+   width: 5vw;
+   max-width: 25px;
+   height: 5vw;
+   border: none;
+ 
+}
+
+.left {
+	top: 26vw;
+	left: -3.5vw;
+	font-size: 3vw;
+	opacity: 0.5;
+}
+
+.right {
+	top: 26vw;
+	right: -3.5vw;
+	font-size: 3vw;
+	opacity: 0.5;
+
+}
+
+.products-cont {
+	display: flex;
+	height: ;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	margin: 5px 10px;
+	
+}
+
+.product {
+  max-width: 300px;	
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 20px;
+  margin-bottom: 40px;
+
+}
+
+.product-name {
+	font-family: "Montserrat",sans-serif;
+    font-size: 15pt;
+	margin-bottom: 7px;
+}
+
+.product-name:hover {
+	font-size: 18pt;
+	transition: font-size 1s ease-in
+}
+
+.product-img {
+	max-width: 280px;
+	width: 32vw;
+	height: auto;
+	margin-bottom: 15px;
+	transition: width 1s ease-in
+}
+
+.product-img:hover {
+	width: 45vw;
+}
+
+.product-price {
+	font-family: "Montserrat", sans-serif;
+	font-size: 17pt;
+	margin-bottom: 12px;
+	transition: font-size 1s ease-in
+}
+
+.product-price:hover {
+	font-size: 19pt;
+}
+
+.color-selector {
+	margin-bottom: -10px;
+}
+
+@media only screen and (max-width: 500px) {
+	.product-slider {
+		max-width: 430px;
+		width: 60vw;
+		height: 400px;
+	}
+	
+	.left, .right {
+		top: 47.5vw;
+	}
+	
+	.product {
+		max-width: 350px;
+	}
+	
+	.prouduct-img {
+	   max-width: 430px;
+	   width: 37vw;
+	}
+	
+	.product-img:hover {
+		width: 37vw;
+	}
+}
+
+@media  only screen and (min-width: 768px) {
+	.product-slider {
+		max-width: 700px;
+		width: 88vw;
+ 	    height: 45vw;
+	}
+	
+	.left, .right {
+		top: 20vw;
+	}
+	
+	.product {
+		max-width: 230px;
+	}
+	
+	.product-img {
+		max-width: 230px;
+		width: 23vw;
+	}
+	
+	.product-img:hover {
+		width: 35w;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.product-slider {
+		max-width: 88vw;
+ 	    max-height: 30vw;
+	}
+	
+	.left, .right {
+		top : 12.5vw;
+	}
+	
+	.product {
+	  max-width: 30vw;	
+	  max-height: 26vw;
+	  margin-left: 3.5vw;
+	}
+	
+	.product-img {
+		width: 16vw;
+	}	
+	
+	.product-img:hover {
+		width: 30vw;
+	}
+}
+
+input[type="radio"] {
+	position: relative;
+	height: 20px;
+	width: 20px;
+	appearance:none;
+	border: none;
+	border-radius: 50%;
+}
+
+input[type="radio"]:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  cursor:pointer
+}
+
+input[value="Yellow Gold"]:before {
+	background: #E6CA97;
+}
+
+input[value="White Gold"]:before {
+	background: #D9D9D9;
+}
+
+input[value="Rose Gold"]:before {
+	background: #E1A4A9;
+}
+
+input[value="Yellow Gold"]:checked:before {
+	background: #E6CA97;
+}
+
+input[value="White Gold"]:checked:before {
+	background: #D9D9D9;
+}
+
+input[value="Rose Gold"]:checked:before {
+	background: #E1A4A9;
+}
+
+input[type="radio"]:checked:before{
+   border: 1px solid white;
+   outline: 0.5px solid black;
+}
+
+.colorName {
+	font-size: 12pt;
+	font-family: "Avenir-Book"
+}
+
+.footer {
+	font-family: "Montserrat", sans-serif;
+	font-size: 17pt;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid black;
+	max-width: 320px;
+	margin: auto;
+	border-radius: 5px;
+	padding: 5px 0px;
+	margin-top: 50px;
+}
+
+svg {
+	margin-right: 12px;
+}
+
+.footer:hover, .footer:focus, .footer:active, .footer:hover > svg *, .footer:focus svg *, .footer:active > svg * {
+
+	color: white;
+	background-color: black;
+	stroke: #FFFFFF;
+}
+
+.messagebox {
+	color: #fefefe;
+	max-width: 300px;
+	background-color: #ff3344;
+	box-shadow: 5px 5px 3px #bbbbbb;
+	padding: 10px 8px;
+	text-align: center;
+	border-radius: 10px;
+	border: 2px ridge #ffff66;
+	font-family: "Montserrat", sans-serif;
+	position: fixed;
+	top: 2vw;
+	right: 20px;
+}
+
+.closemessage {
+	border: 3px solid #efefef;
+	box-shadow: 2px 2px 3px #929292;
+	border-radius: 50%;
+	background-color: inherit;
+	font-size: 15px;
+	cursor: pointer;
+	color: #efefef
+}
+
+
