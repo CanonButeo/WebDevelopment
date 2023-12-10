@@ -54,11 +54,11 @@ export default function Body() {
 	  element.style.removeProperty = "user-select"; 
   }
   	
-	function close() {
+  function close() {
 		setWillShow(true);
 	}
 	
-	function handleChange(event, id) {
+   function handleChange(event, id) {
 		const value = event.target.value 
 		setProds(prevProducts => { 
 			   return prevProducts.map((prod) => {
@@ -69,13 +69,13 @@ export default function Body() {
 	    }
 	
 	
-	const products = prods.map(product => {
+    const products = prods.map(product => {
 		return (
 			<Product item={product}  handleChange={handleChange} key={product.id} /> 
 		)
 	})
 	
-	function scrollImg(direction) {
+    function scrollImg(direction) {
 		const area = slider.current;
 		direction === "left" ? area.scrollLeft -= scroll : area.scrollLeft += scroll
 	}
