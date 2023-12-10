@@ -44,33 +44,6 @@ export default function Body() {
    
     }, []);
 	
-  /* const handleTouchStart = useCallback((event) => {
-	  const element = slider.current;
-	  if(!element) return;
-	  const touch = event.touches[0];
-	  const startPos = {
-		  left: element.scrollLeft,
-		  x: touch.clientX
-	  }
-	  
-	  const handleTouchMove = (event) => {
-		  const touch = event.touches[0];
-		  const amount = touch.clientX - startPos.x;
-		  element.scrollLeft = startPos.left - amount;
-		  updateCursor(element);
-	  }
-	  
-	  const handleTouchEnd = (event) => {
-		  document.removeEventListener("touchmove", handleTouchMove);
-		  document.removeEventListener("touchend", handleTouchEnd);
-		  resetCursor(element);
-	  }
-	  
-	  document.addEventListener("touchmove", handleTouchMove);
-	  document.addEventListener("touchend", handleTouchEnd);
-
-  }, []) 	
- */	   
   function updateCursor(element) {
 	  element.style.cursor = "grabbing";
 	  element.style.userSelect = "none";
